@@ -1,0 +1,27 @@
+{
+  "name": "filter-label",
+  "version": "1.0.0",
+  "description": "GitHub Action that filters by issue label",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "ncc build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chocrates/filter-label.git"
+  },
+  "author": "Chris McIntosh (chocrates@github.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chocrates/filter-label/issues"
+  },
+  "homepage": "https://github.com/Chocrates/filter-label#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.0",
+    "@actions/github": "^2.0.0"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5"
+  }
+}
