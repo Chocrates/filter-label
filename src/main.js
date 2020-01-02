@@ -6,9 +6,11 @@ async function run() {
         const validLabels = core.getInput('labels').split(',')
         const issueLabels = github.context.payload.issue.labels.map(label => { label.name  })
         if(!(issueLabels.filter(label => validLabels.includes(label)))){
+            core.setDebug('Attempting to stop execution')
             // stop execution
             return 78
         }
+        core.setDebug('Labels are valid, continuing')
     } catch(error) {
         core.setFailed(error.message)
     }
