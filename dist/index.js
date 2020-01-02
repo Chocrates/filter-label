@@ -410,6 +410,7 @@ async function run() {
     try {
         const validLabels = core.getInput('labels').split(',')
         const issueLabels = github.context.payload.issue.labels.map(label => { label.name  })
+        core.debug(`Label object: ${JSON.stringify(github.context.payload.issue.labels)}`)
         core.debug(`Valid Labels: ${validLabels}`)
         core.debug(`Issue Labels: ${issueLabels}`)
         core.debug(`Issue Label filter: ${issueLabels.filter(label => validLabels.includes(label))}`)
