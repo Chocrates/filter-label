@@ -12,6 +12,7 @@ async function run() {
         if(!(issueLabels.filter(label => validLabels.includes(label)).length)){
             core.debug('Attempting to stop execution')
             // stop execution
+            core.setFailed('Not really failed, just a test')
             return 78
         }
         core.debug('Labels are valid, continuing')
