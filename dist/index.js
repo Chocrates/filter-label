@@ -414,7 +414,7 @@ async function run() {
         core.debug(`Valid Labels: ${validLabels}`)
         core.debug(`Issue Labels: ${issueLabels}`)
         core.debug(`Issue Label filter: ${issueLabels.filter(label => validLabels.includes(label))}`)
-        if(!(issueLabels.filter(label => validLabels.includes(label)))){
+        if(!(issueLabels.filter(label => validLabels.includes(label)).length)){
             core.debug('Attempting to stop execution')
             // stop execution
             return 78
