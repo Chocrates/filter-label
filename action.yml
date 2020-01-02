@@ -1,0 +1,9 @@
+name: 'Filter Issue Labels'
+description: 'Filters issues by label.  Any issue with the passed in label will continue forward to the next step, otherwise it will stop processing'
+inputs:
+  LABELS:
+    description: 'CSV of labels you wish to process'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
