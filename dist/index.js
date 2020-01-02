@@ -409,7 +409,7 @@ const github = __webpack_require__(469)
 async function run() {
     try {
         const validLabels = core.getInput('labels').split(',')
-        const issueLabels = github.context.payload.issue.labels.map(label => { label.name  })
+        const issueLabels = github.context.payload.issue.labels.map(label => { return label.name  })
         core.debug(`Label object: ${JSON.stringify(github.context.payload.issue.labels)}`)
         core.debug(`Valid Labels: ${validLabels}`)
         core.debug(`Issue Labels: ${issueLabels}`)
